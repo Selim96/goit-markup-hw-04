@@ -3,9 +3,12 @@
   --button-color: #2196f3;
   --primery-text-color: #757575;
   --baner-text-color: #fff;
-  --baner-color: rgba(47, 48, 58, 1);
+  --baner-color: rgba(196, 196, 196, 1);
   --filter-color: rgba(245, 244, 250, 1);
   --footer-text-color: rgba(255, 255, 255, 0.6);
+  --footer-color: rgba(47, 48, 58, 1);
+  --benefits-item-color: rgba(245, 244, 250, 1);
+  --border-clients-color: rgba(175, 177, 184, 1);
 }
 
 /* цвет фона #e5e5e5 */
@@ -116,6 +119,19 @@ h3 {
 /* Оформление основной части */
 
 .baner {
+  max-width: 1600px;
+  height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/bg-img/Img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-color: var(--baner-color);
   text-align: center;
   padding-top: 200px;
@@ -170,6 +186,33 @@ h3 {
   width: 270px;
 }
 
+.benefits-item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-color: var(--benefits-item-color);
+  background-size: 70px 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+}
+
+.benefits-item:nth-child(1)::before {
+  background-image: url(../images/banefis-icon/antenna_1.png);
+}
+
+.benefits-item:nth-child(2)::before {
+  background-image: url(../images/banefis-icon/clock.png);
+}
+
+.benefits-item:nth-child(3)::before {
+  background-image: url(../images/banefis-icon/diagram.png);
+}
+
+.benefits-item:nth-child(4)::before {
+  background-image: url(../images/banefis-icon/astronaut.png);
+}
+
 .benefits-text {
   font-size: 14px;
   line-height: 1.71;
@@ -192,7 +235,6 @@ h3 {
 
 .title {
   color: var(--title-color);
-  margin-bottom: 10px;
 }
 
 .pictures {
@@ -230,8 +272,10 @@ h3 {
   padding-bottom: 30px;
   margin-right: 30px;
   width: 270px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .names {
@@ -241,6 +285,7 @@ h3 {
   text-align: center;
   letter-spacing: 0.03em;
   margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .profession {
@@ -248,6 +293,39 @@ h3 {
   line-height: 1.1875;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-item + .social-item {
+  margin-left: 10px;
+}
+
+.social-link {
+  text-decoration: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--title-color);
+  display: block;
+}
+
+/* ------оформление Постоянные клиенты---------- */
+.clients-list {
+  display: flex;
+  justify-content: center;
+}
+
+.clients-link {
+  display: block;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--border-clients-color);
+  border-radius: 4px;
 }
 
 /* ---------------офрмление портфолио----------- */
@@ -348,7 +426,7 @@ h3 {
 
 .footer {
   color: #fff;
-  background-color: var(--baner-color);
+  background-color: var(--footer-color);
   padding: 60px 0;
 }
 
