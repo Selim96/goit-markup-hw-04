@@ -188,6 +188,7 @@ h3 {
   line-height: 1.143;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .benefits-list {
@@ -533,6 +534,7 @@ address {
   background-color: var(--footer-invitation-bg);
 }
 
-.invitation .social-link:hover {
+.invitation .social-link:hover,
+.invitation .social-link:focus {
   background-color: var(--button-color);
 }
