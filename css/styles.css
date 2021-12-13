@@ -353,11 +353,25 @@ h3 {
 }
 
 .clients-link {
-  display: block;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 92px;
   border: 1px solid var(--border-clients-color);
   border-radius: 4px;
+  color: var(--icon-color);
+}
+
+.clients-item-icon {
+  fill: currentColor;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--button-color);
+  color: var(--button-color);
 }
 
 /* ---------------офрмление портфолио----------- */
