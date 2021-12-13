@@ -9,6 +9,9 @@
   --footer-color: rgba(47, 48, 58, 1);
   --benefits-item-color: rgba(245, 244, 250, 1);
   --border-clients-color: rgba(175, 177, 184, 1);
+  --icon-color: rgba(175, 177, 184, 1);
+  --icon-hover-color: #fff;
+  --footer-invitation-bg: rgba(255, 255, 255, 0.1);
 }
 
 /* цвет фона #e5e5e5 */
@@ -114,6 +117,16 @@ h3 {
 .contacts a:hover,
 .contacts a:focus {
   color: var(--button-color);
+}
+
+.navigation.contacts a {
+  display: flex;
+  align-items: center;
+}
+
+.envelope {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /* Оформление основной части */
@@ -310,14 +323,33 @@ h3 {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: var(--title-color);
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--icon-color);
+}
+
+.social-link-icon {
+  fill: currentColor;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--button-color);
+  color: var(--icon-hover-color);
 }
 
 /* ------оформление Постоянные клиенты---------- */
+.clients h2 {
+  margin-bottom: 50px;
+}
+
 .clients-list {
   display: flex;
-  justify-content: center;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .clients-link {
@@ -452,4 +484,34 @@ address {
 
 .address:last-child {
   margin-bottom: 0;
+}
+
+.footer-links {
+  display: flex;
+}
+
+.adress-logo {
+  margin-right: 70px;
+}
+
+.invitation {
+  padding-top: 12px;
+}
+
+.invitation p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.invitation .social-link {
+  color: var(--icon-hover-color);
+  background-color: var(--footer-invitation-bg);
+}
+
+.invitation .social-link:hover {
+  background-color: var(--button-color);
 }
